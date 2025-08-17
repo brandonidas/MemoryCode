@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\ndef merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    else:\n        mid = len(arr) // 2\n        left = arr[:mid]\n        right = arr[mid:]\n        sorted_left = merge_sort(left)\n        sorted_right = merge_sort(right)\n        return sorted_left + sorted_right\n\ndef my_function():\n    try:\n        arr = [1, 2, 3, 4, 5]\n        sorted_arr = merge_sort(arr)\n        print(\"Sorted array:\", sorted_arr)\n    except Exception as e:\n        print(\"Error during merge sort:\", e)\n\nmy_function()\n```"
+      ],
+      "history_model_output": [
+        "```python\ndef merge_sort(arr):\n    \"\"\"\n    Implements merge sort for sorting an array.\n\n    Args:\n        arr: A list of comparable elements.\n\n    Returns:\n        A new list containing the sorted elements.\n    \"\"\"\n    if len(arr) <= 1:\n        return arr  # Base case: single-element array\n\n    mid = len(arr) // 2\n    left = arr[:mid]\n    right = arr[mid:]\n\n    sorted_left = merge_sort(left)\n    sorted_right = merge_sort(right)\n\n    result = sorted_left + sorted_right\n    return result\n\n\ndef main():\n    try:\n        arr = [5, 2, 1, 3, 4]\n        sorted_arr = merge_sort(arr)\n        print(\"Sorted array:\", sorted_arr)\n\n    except Exception as e:\n        print(\"An error occurred:\", e)\n    return 0  # Return 0 to indicate success\n\n\nif __name__ == '__main__':\n    main()\n```\n\n"
+      ]
+    }
+  ]
+}

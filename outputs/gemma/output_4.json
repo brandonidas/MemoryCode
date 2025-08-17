@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\nclass MyLinkedList:\n    def __init__(self):\n        self._data = []\n\n    def insert(self, data):\n        self._data.append(data)\n\n    def delete(self, data):\n        if self._data:\n            try:\n                self._data.remove(data)\n            except:\n                pass  # Handle the exception gracefully\n\n    def print_list(self):\n        print(\"List:\", self._data)\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass MyLinkedList(list):\n    def __init__(self, data):\n        self.data = data\n\n    def append(self, item):\n        self.data.append(item)\n\n    def pop(self):\n        return self.data.pop()\n\n    def __len__(self):\n        return len(self.data)\n\n# Example usage:\nmy_linked_list = MyLinkedList([1, 2, 3])\nprint(my_linked_list.append(4))\nprint(my_linked_list.pop())\nprint(my_linked_list.pop())\n```"
+      ]
+    }
+  ]
+}

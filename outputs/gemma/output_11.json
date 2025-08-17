@@ -1,0 +1,14 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\ndef is_valid_binary_search_tree(tree):\n    \"\"\"\n    Checks if a given tree is a valid binary search tree (BST).\n\n    Args:\n        tree: A list representing the binary search tree.\n\n    Returns:\n        True if the tree is a valid BST, False otherwise.\n    \"\"\"\n    if not tree:\n        return True\n\n    try:\n        if len(tree) == 2:\n            return True\n        else:\n            return False\n    except Exception as e:\n        print(f\"Error checking tree: {e}\")\n        return False\n```",
+        "```python\nclass Inventory:\n    def __init__(self):\n        self.stock = []\n\n    def add_stock(self, item):\n        if item in self.stock:\n            self.stock.remove(item)\n        else:\n            print(\"Item not found in the inventory.\")\n\n    def remove_stock(self, item):\n        try:\n            self.stock.remove(item)\n        except Exception as e:\n            print(f\"Error removing {item}: {e}\")\n            return\n\n    def get_stock(self):\n        return self.stock\n\n    def print_stock(self):\n        print(\"Stock:\")\n        for item in self.stock:\n            print(item)\n```"
+      ],
+      "history_model_output": [
+        "```python\ndef is_valid_binary_search_tree(tree):\n    \"\"\"\n    Determines if a given tree is a valid binary search tree (BST).\n\n    Args:\n        tree: A list representing the binary search tree.\n\n    Returns:\n        True if the tree is a valid BST, False otherwise.\n    \"\"\"\n\n    def inorder_to_tree(node):\n        if node == tree:\n            return True\n        else:\n            return inorder_to_tree(node[0])\n\n    try:\n        root = tree[0]\n        if inorder_to_tree(root) == True:\n            return True\n        else:\n            return False\n    except Exception as e:\n        return False\n\n    return is_valid_binary_search_tree(tree[1])\n```",
+        "```python\nclass Inventory:\n    def __init__(self, stock_quantity):\n        self.stock_quantity = stock_quantity\n\n    def add_stock(self, item):\n        if self.stock_quantity < 0:\n            print(\"Error: Stock quantity must be positive.\")\n            return False\n        self.stock_quantity -= item.quantity\n\n    def remove_stock(self, item):\n        if self.stock_quantity >= item.quantity:\n            self.stock_quantity = self.stock_quantity - item.quantity\n            return True\n        else:\n            print(\"Error: Stock quantity cannot be greater than or equal to the quantity of the item.\")\n            return False\n\n    def get_stock(self):\n        return self.stock_quantity\n\n    def __str__(self):\n        return f\"Inventory: {self.stock_quantity}\"\n```"
+      ]
+    }
+  ]
+}

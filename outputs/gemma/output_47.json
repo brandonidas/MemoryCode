@@ -1,0 +1,16 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\nclass Library:\n    def __init__(self):\n        self.books = []  # Initialize an empty list of books\n\n    def add_book(self, book):\n        try:\n            self.books.append(book)\n        except Exception as e:\n            print(f\"Error adding book: {e}\")\n            return False  # Return False to indicate failure\n        return True  # Indicate success\n\n\n    def remove_book(self, book):\n        try:\n            if book in self.books:\n                self.books.remove(book)\n                print(f\"Book '{book}' removed.\")\n            else:\n                print(f\"Book '{book}' not found.\")\n        except Exception as e:\n            print(f\"Error removing book: {e}\")\n\n\n    def get_book_by_name(self, book_name):\n        try:\n            return self.books.pop(book_name)\n        except Exception as e:\n            print(f\"Error getting book by name: {e}\")\n            return None  # Return None to indicate failure\n```\n"
+      ],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [],
+      "history_model_output": [
+        "```python\nimport random\n\nclass Library:\n    def __init__(self):\n        self.books = []\n        self.remove_books = False\n\n    def add_book(self, title, author, genre, description):\n        try:\n            if genre == \"fantasy\":\n                self.books.append({\"title\": title, \"author\": author, \"genre\": genre, \"description\": description})\n            elif genre == \"science fiction\":\n                self.books.append({\"title\": title, \"author\": author, \"genre\": genre, \"description\": description})\n            else:\n                print(\"Invalid genre. Please choose from 'fantasy', 'science fiction', or 'other'.\")\n\n        except Exception as e:\n            print(f\"Error adding book: {e}\")\n\n\n    def remove_book(self, title):\n        try:\n            if self.remove_books:\n                self.books.remove(title)\n                print(f\"Removed book: {title}\")\n            else:\n                print(f\"Book '{title}' was already removed.\")\n        except Exception as e:\n            print(f\"Error removing book: {e}\")\n\n    def get_book_info(self, title):\n        try:\n            if self.books:\n                return self.books[title]\n            else:\n                return \"No books found.\"\n        except Exception as e:\n            print(f\"Error getting book information: {e}\")\n\n    def get_library_info(self):\n        return Library()\n\n# Example usage:\nlibrary = Library()\nlibrary.add_book(\"The Lord of the Rings\", \"J.R.R. Tolkien, 1947, Fantasy\")\nlibrary.add_book(\"Pride and Prejudice\", \"Jane Austen, 1813, Romance\")\nlibrary.add_book(\"To Kill a Mockah Simon\", \"Harper Lee, 1962, Young Adult\")\nlibrary.add_book(\"The Hitchhiker's Guide to the Galaxy\", \"Douglas Adams, 1970, Science Fiction\")\n\nprint(f\"Library information: {library.get_library_info()}\")\n```\n\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [
+        "```python\nclass LRUC:\n    def __init__(self, capacity=10):\n        self.capacity = capacity\n        self.cache = {}  # Dictionary to store cached values\n\n    def get(self, key):\n        if self.cache[key]:\n            return self.cache[key]\n        else:\n            return None\n\n    def put(self, key, value):\n        if key in self.cache:\n            try:\n                self.cache[key] = value\n            except:\n                print(\"Key not found:\", key)\n        else:\n            print(\"Key not found:\", key)\n\n    def clear(self):\n        self.cache = {}\n        return True\n```",
+        "```python\nimport heapq\n\nclass Heap:\n    def __init__(self, size=0):\n        self.size = size\n        self.heap = []\n        self.inserted = False\n        self.deletions = 0\n\n    def insert(self, item):\n        if self.inserted:\n            return\n        self.heap.append(item)\n        self.inserted = True\n\n    def heapify(self, index):\n        if index <= 0:\n            return\n        self.heapify(index)\n\n        # Swap the element at the given index with the last item in the heap\n        self.heap[index] = self.heap[-1]\n        self.heap.pop()\n\n    def delete(self, index):\n        if self.inserted:\n            return\n        self.deletions += 1\n        self.heap.remove(index)\n        self.inserted = False\n\n    def peek(self):\n        if self.inserted:\n            return self.heap[0]\n        return self.heap[-1]\n\n    def __str__(self):\n        return str(self.heap)\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass LRUCache:\n    def __init__(self, name=\"LRU\"):\n        self.name = name\n        self.cache_size = 1\n        self.items = []  # List to store items (e.g., integers)\n\n    def get(self, key):\n        try:\n            return self.cache_size - 1\n        except:\n            return None\n\n    def put(self, key, value):\n        try:\n            if key in self.items:\n                self.items.remove(key)\n                self.cache_size += 1\n            else:\n                self.items.append({\"key\": key, \"value\": value})\n                self.cache_size = 1\n        except:\n            pass\n\n    def __len__(self):\n        return len(self.items)\n\n    def is_empty(self):\n        return len(self.items) == 0\n```",
+        "```python\nclass Heap:\n    def __init__(self, size):\n        self.size = size\n        self.insert = None\n        self.heapify = True\n\n    def insert(self, item):\n        if self.heapify:\n            self.heapify(len(item))\n        self.insert_method(item)\n\n    def heapify(self, index):\n        if index < 0 or self.heapify[index] is None:\n            self.heapify(index + 1)\n\n    def insert_method(self, item):\n        if self.heapify[index]:\n            try:\n                self.insert_method(item)\n            except Exception as e:\n                print(f\"Error inserting {item}: {e}\")\n                return  # Or raise the exception if you prefer\n\n    def get_size(self):\n        return self.size\n\n    def __str__(self):\n        return f\"Heap: Size = {self.size}\"\n```"
+      ]
+    }
+  ]
+}

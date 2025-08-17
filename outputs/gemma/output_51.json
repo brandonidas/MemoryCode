@@ -1,0 +1,18 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [
+        "```python\ndef is_palindrome(s):\n    \"\"\"\n    Checks if a string is a palindrome.\n\n    Args:\n        s: The string to check.\n\n    Returns:\n        True if the string is a palindrome, False otherwise.\n    \"\"\"\n    return s == s[::-1]\n```",
+        "```python\nclass Inventory:\n    def __init__(self):\n        self.stock = []  # Store current stock of each item\n\n    def add_item(self, item):\n        if item in self.stock:\n            self.stock.remove(item)\n        else:\n            print(\"Item not found.\")\n\n    def remove_item(self, item):\n        try:\n            self.stock.remove(item)\n        except:\n            print(\"Item not found.\")\n\n    def get_stock(self):\n        return self.stock\n\n    def update_stock(self, new_stock):\n        if new_stock in self.stock:\n            self.stock.remove(new_stock)\n        else:\n            print(\"Item not found.\")\n\n    def get_stock_details(self):\n        return self.stock\n\n    def print_inventory(self):\n        print(\"Inventory:\")\n        for item in self.stock:\n            print(item)\n        print()\n\n    def show_inventory(self):\n        print(\"\\nInventory:\")\n        for item in self.stock:\n            print(item)\n        print()\n\n    def get_inventory(self):\n           return self.stock\n\n    def update_inventory(self, new_stock):\n        if new_stock in self.stock:\n            self.stock[new_stock] = True  # Mark the item as available\n        else:\n            print(\"Item not found.\")\n\n    def get_inventory_details(self):\n        return self.stock\n\n    def print_inventory_details(self):\n        print(\"\\nInventory Details:\")\n        for item in self.stock:\n            print(item)\n        print()\n\n\n# Example usage:\ninventory = Inventory()\n\ninventory.add_item(\"Apple\")\ninventory.add_item(\"Banana\")\ninventory.add_item(\"Orange\")\ninventory.add_item(\"Grapes\")\ninventory.add_item(\"Pineapple\")\ninventory.add_item(\"Cherry\")\n\ninventory.update_stock(10) # Mark an item as available\ninventory.remove_item(\"Apple\")\ninventory.update_stock(20)  # Mark an item as available\n\ninventory.print_inventory()\ninventory.show_inventory()\ninventory.get_inventory()\ninventory.print_inventory_details()\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass Inventory:\n    def __init__(self):\n        self.stock = []\n        self.remove_stock = False\n\n    def add_stock(self, item):\n        if self.stock and self.stock[0] == item:\n            self.stock.append(item)\n            self.remove_stock = True\n        else:\n            print(\"Item not found in the stock.\")\n\n    def remove_stock(self):\n        if self.stock:\n            try:\n                self.stock.remove(item)\n            except:\n                print(\"Item not found in the stock.\")\n        else:\n            print(\"No items in the stock.\")\n\n    def get_stock(self):\n        return self.stock\n\n    def __str__(self):\n        return \"Inventory Class (Stock List):\\n\" + str(self.stock)\n\n# Example usage:\ninventory = Inventory()\ninventory.add_stock(\"Apple\")\ninventory.add_stock(\"Banana\")\ninventory.add_stock(\"Orange\")\ninventory.add_stock(\"Grape\")\ninventory.remove_stock()\n```",
+        "```python\ndef is_palindrome(s):\n    \"\"\"\n    Checks if a string is a palindrome.\n\n    Args:\n        s: The string to check.\n\n    Returns:\n        True if the string is a palindrome, False otherwise.\n    \"\"\"\n    return s == s[::-1]\n```"
+      ]
+    }
+  ]
+}

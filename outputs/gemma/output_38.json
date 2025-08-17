@@ -1,0 +1,16 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [
+        "```python\ndef merge_sorted_lists(list1, list2):\n    \"\"\"Merges two sorted lists into a single sorted list.\"\"\"\n    merged_list = []\n    for item in list1:\n        merged_list.append(item)\n    for item in list2:\n        merged_list.append(item)\n    return merged_list\n\n# Example usage:\nlist1 = [3, 4, 5, 6, 7]\nlist2 = [9, 10, 11, 12, 13]\n\nmerged = merge_sorted_lists(list1, list2)\nprint(merged)\n```"
+      ],
+      "history_model_output": [
+        "```python\ndef merge_sorted_lists(list1, list2):\n    \"\"\"Merges two sorted lists into a single sorted list.\"\"\"\n    merged_list = []\n    for item in list1:\n        merged_list.append(item)\n    for item in list2:\n        merged_list.append(item)\n    return merged_list\n\n# Example usage:\nlist1 = [3, 5, 6, 7, 8]\nlist2 = [4, 9, 10, 11, 12]\n\nmerged_list = merge_sorted_lists(list1, list2)\nprint(merged_list)\n```\n"
+      ]
+    }
+  ]
+}

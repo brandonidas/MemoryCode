@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\nclass Inventory:\n    def __init__(self, inventory_items):\n        self.inventory_items = inventory_items\n\n    def add_stock(self, item):\n        try:\n            self.inventory_items.append(item)\n        except Exception as e:\n            print(f\"Error adding stock: {e}\")\n\n    def remove_stock(self, item):\n        try:\n            if item in self.inventory_items:\n                self.inventory_items.remove(item)\n        except Exception as e:\n            print(f\"Error removing stock: {e}\")\n\n    def get_inventory(self):\n        return self.inventory_items\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass Inventory:\n    def __init__(self, inventory_list):\n        self.inventory_list = inventory_list\n\n    def add_stock(self, item):\n        try:\n            self.inventory_list.append(item)\n        except Exception as e:\n            print(f\"Error adding stock: {e}\")\n\n    def remove_stock(self, item):\n        try:\n            if item in self.inventory_list:\n                self.inventory_list.remove(item)\n        except Exception as e:\n            print(f\"Error removing stock: {e}\")\n```"
+      ]
+    }
+  ]
+}

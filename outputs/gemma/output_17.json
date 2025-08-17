@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\nclass LRUCache:\n    def __init__(self):\n        self.cache = {}  # Dictionary to store cache entries\n        self.get_method = \"get\"  # Method to retrieve a value\n\n    def get(self, key):\n        try:\n            return self.cache.get(key)\n        except KeyError:\n            print(\"Key not found in the cache.\")\n            return None\n\n    def put(self, key, value):\n        if key in self.cache:\n            try:\n                self.cache[key] = value\n            except Exception as e:\n                print(\"Error putting key:\", key)\n                self.cache[key] = value  # Update cache entry\n        else:\n            print(\"Key not found in the cache.\")\n\n    def __str__(self):\n        return \"LRUCache\\n\" + str(self.cache)\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass LRUCache:\n    def __init__(self, capacity=10):\n        self.capacity = capacity\n        self.cache = {}  # Dictionary to store frequently accessed items\n\n    def get(self, key):\n        try:\n            if key in self.cache:\n                return self.cache[key]\n            else:\n                return None  # Key not found\n        except Exception as e:\n            print(f\"Error getting key {key}: {e}\")\n            return None\n\n    def put(self, key, value):\n        try:\n            if key in self.cache:\n                del self.cache[key]\n                return True  # Key already exists\n            else:\n                self.cache[key] = value\n                return True  # Key existing, update cache\n        except Exception as e:\n            print(f\"Error putting key {key}: {e}\")\n            return False  # Key not found\n\n    def __str__(self):\n        return f\"LRUCache({self.capacity})\"\n```"
+      ]
+    }
+  ]
+}

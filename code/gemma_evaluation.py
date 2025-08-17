@@ -17,11 +17,11 @@ from tqdm import tqdm
 import time
 
 class GemmaEvaluator:
-    def __init__(self, base_url="http://localhost:1234/v1", db_path="gemma_results.db"):
+    def __init__(self, base_url="http://100.127.255.204:1234/v1", db_path="gemma_results.db"):
         self.base_url = base_url
         self.db_path = db_path
         self.interrupted = False
-        self.model_name = "gemma-3-270m-it-qat-mlx"  # Specific Gemma model
+        self.model_name = "gemma-3-270m-it"  # Specific Gemma model
         self.init_database()
         
         # Setup signal handler for graceful interruption
@@ -91,7 +91,7 @@ class GemmaEvaluator:
                 response = requests.post(
                     f"{self.base_url}/chat/completions",
                     json=payload,
-                    timeout=600  # 10 minutes
+                    timeout=1200  # 20 minutes
                 )
                 
                 if response.status_code == 200:

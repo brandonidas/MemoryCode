@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\ndef is_palindrome(s):\n    \"\"\"Checks if a string is a palindrome.\"\"\"\n    return s == s[::-1]\n\n# Example usage\nstring1 = \"A man, a plan, a canal: Panama\"\nstring2 = \"racecar\"\nstring3 = \"hello\"\n\nprint(f\"'{string1}' is a palindrome: {is_palindrome(string1)}\")\nprint(f\"'{string2}' is a palindrome: {is_palindrome(string2)}\")\nprint(f\"'{string3}' is a palindrome: {is_palindrome(string3)}\")\n```"
+      ],
+      "history_model_output": [
+        "```python\ndef is_palindrome(input_string):\n    \"\"\"\n    Checks if a string is a palindrome using a simple approach.\n\n    Args:\n        input_string: The string to check for palindrome status.\n\n    Returns:\n        True if the string is a palindrome, False otherwise.\n    \"\"\"\n    string = input_string\n    for i in range(len(string)):\n        if string == string[i:] + string[:i]:\n            return True\n    return False\n\n# Example usage:\nstring1 = \"A man, a plan, a canal: Panama\"\nstring2 = \"racecar\"\nstring3 = \"hello\"\nstring4 = \"madam\"\nstring5 = \"a\"\nstring6 = \"aba\"\n\n\nprint(f\"{string1} is a palindrome: {is_palindrome(string1)}\")\nprint(f\"{string2} is a palindrome: {is_palindrome(string2)}\")\nprint(f\"{string3} is a palindrome: {is_palindrome(string3)}\")\nprint(f\"{string4} is a palindrome: {is_palindrome(string4)}\")\nprint(f\"{string5} is a palindrome: {is_palindrome(string5)}\")\nprint(f\"{string6} is a palindrome: {is_palindrome(string6)}\")\n```"
+      ]
+    }
+  ]
+}

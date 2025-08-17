@@ -1,0 +1,16 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [
+        "```python\ndef has_cycle(head):\n    if not head:\n        return False\n    current = head\n    while current != head:\n        current = current.next\n    return current == head\n```"
+      ],
+      "history_model_output": [
+        "```python\nclass ListNode:\n    def __init__(self, val=0):\n        self.val = val\n        self.next = None\n\ndef has_cycle(head):\n    try:\n        if head is None:\n            return False\n        current = head\n        while current:\n            if current.val % 2 == 1:\n                return True\n            current = current.next\n        return False\n    except Exception as e:\n        return False\n```"
+      ]
+    }
+  ]
+}

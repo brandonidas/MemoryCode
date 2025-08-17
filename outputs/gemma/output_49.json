@@ -1,0 +1,16 @@
+{
+  "sessions": [
+    {
+      "session_model_output": [
+        "```python\ndef is_valid_binary_search_tree(tree):\n    \"\"\"\n    Determines if a given tree is a valid binary search tree.\n\n    Args:\n        tree: A dictionary representing a binary search tree.  Keys are node identifiers,\n               values are lists of child nodes.\n\n    Returns:\n        True if the tree is a valid binary search tree, False otherwise.\n    \"\"\"\n    try:\n        if not isinstance(tree, dict):\n            return False\n        if not tree:\n            return True\n        for node in tree:\n            if not isinstance(node, list):\n                return False\n            for child in node:\n                if not isinstance(child, list):\n                    return False\n            return True\n    except Exception as e:\n        return False\n    return True\n```"
+      ],
+      "history_model_output": []
+    },
+    {
+      "session_model_output": [],
+      "history_model_output": [
+        "```python\ndef is_valid_binary_search_tree(tree):\n    \"\"\"\n    Checks if a given tree is a valid binary search tree.\n\n    Args:\n        tree: A list representing a binary search tree.\n\n    Returns:\n        True if the tree is a valid binary search tree, False otherwise.\n    \"\"\"\n    if not tree:\n        return True\n    for node in tree:\n        if node <= tree and node >= tree[-1]:\n            return False\n    return True\n```"
+      ]
+    }
+  ]
+}
