@@ -1,0 +1,25 @@
+# Core dependencies for MemoryCode evaluation and dataset processing
+
+# Command line interface
+fire>=0.4.0
+
+# Progress bars
+tqdm>=4.64.0
+
+# HTTP requests (for Gemma API)
+requests>=2.28.0
+
+# Scientific computing
+numpy>=1.21.0
+
+# Machine learning libraries
+torch>=1.12.0
+transformers>=4.21.0
+
+# API clients
+cohere>=4.0.0
+openai>=1.0.0
+
+# Note: The following are Python standard library modules (no installation needed):
+# - json, os, sqlite3, signal, sys, datetime, pathlib, time
+# - ast, re, warnings, functools, collections, random, shutil
